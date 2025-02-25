@@ -1,0 +1,157 @@
+/* App Container */
+.App {
+  text-align: center;
+  margin: 0; /* Remove top/bottom margins for full-page height */
+  font-family: 'Poppins', sans-serif;
+  background: url('https://png.pngtree.com/thumb_back/fh260/background/20201101/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_452981.jpg') no-repeat center center/cover; /* Full-page background image */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  padding: 30px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4); /* Add an inner shadow for depth */
+  color:coral; /* White text for contrast */
+}
+
+/* Header */
+h1 {
+  color:chartreuse; /* White text */
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Dark shadow */
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: 40%;
+  padding: 12px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #2c3e50; /* Dark blue */
+  color: #ecf0f1; /* Light gray text */
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.6); /* Blue-toned shadow */
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #bdc3c7; /* Light gray placeholder */
+}
+
+input[type="text"]:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(44, 62, 80, 0.8); /* Stronger blue glow */
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color:#dd2476; /* White text for buttons */
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Button Variants */
+button.add {
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); /* Coral gradient */
+}
+
+button.edit {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Purple to blue gradient */
+}
+
+button.delete {
+  background: linear-gradient(135deg, #ff512f 0%, #dd2476 100%); /* Red to pink gradient */
+}
+
+button.add:hover,
+button.edit:hover,
+button.delete:hover {
+  filter: brightness(1.1);
+}
+/* Document List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); /* Dark blue gradient */
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 70%;
+  box-shadow: 0 4px 12px rgba(52, 73, 94, 0.6); /* Blue-toned shadow */
+  text-align: left;
+  transition: transform 0.2s ease;
+  color: #ecf0f1; /* Light gray text */
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li h3 {
+  margin: 0 0 8px 0;
+  color: #1abc9c; /* Teal title */
+  font-size: 1.5rem;
+}
+
+li p {
+  margin: 0 0 12px 0;
+  color: #ecf0f1; /* Light gray paragraph text */
+  font-size: 1rem;
+}
+
+/* Error Message */
+.error {
+  color: #e74c3c; /* Red error */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    width: 90%;
+  }
+
+  input[type="text"] {
+    width: 60%;
+  }
+
+  textarea {
+    width: 90%;
+  }
+
+  li {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    width: 95%;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+
+  textarea {
+    width: 95%;
+  }
+
+  li {
+    width: 90%;
+  }
+}
